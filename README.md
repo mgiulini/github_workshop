@@ -141,6 +141,10 @@ Here you are developing a new feature, so you don't want your work to interfere 
 ```
 Why not the standard git push here? The remote server does not know anything about the create_docs branch yet. With this command we specify that a branch create_docs should be created on the remote server, and that this should be connected to the create_docs branch available locally. Every future git pull/git push command on the local branch will fetch/deliver content to the linked remote branch.
 
+![image](figures/push_upstream.png)
+
+*Notice how* **branch 'pr' set up to track 'origin/pr'>**
+
 ### Pull Requests and code review
 
 The feature is now available on the remote server. It is time to merge it with the main branch. This is done through a Pull Request (PR).
@@ -148,7 +152,7 @@ The feature is now available on the remote server. It is time to merge it with t
 - go to the main page of the repository
 
 You should already see a message like this:
-![image](figures/pull_request.png)
+![image](figures/pr.png)
 
 You can open the Pull Request by clicking on the *Compare & pull request* button. Add a title and a description to the PR, and click on *Create pull request*.
 
