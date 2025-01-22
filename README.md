@@ -38,4 +38,52 @@ It's now time that everyone of you has a copy of the online repository on your l
   git clone https://github.com/YOUR_USERNAME/...
   ```
 
-  substitute this dummy address with the one you just copied.
+  substitute this dummy address with the one you just copied. You will be asked for your credentials: once you provide them, the download will start and you will have a local copy of the repository on your laptop!
+
+## Exercise 2. Add, Commit, Push
+
+Now that we have a shared repository, let's add something to it.
+
+[Here]() you will find a very simple python script that generates three random numbers, sorts them, and calculates the average difference between them.
+
+The following instructions should be only executed by one group member. The others can have a look.
+
+1. Download the script and move it to the repository directory.
+2. From the terminal, navigate to the repository directory.
+3. Try the script to see it it works properly on your computer.
+```bash
+python random_diff.py
+```
+
+4. Once you're sure the script works, check for the changes within the repository
+```bash
+  git status
+```
+  You should see something similar to this:
+
+  This command will tell you the current state of the working directory.
+
+5. add the script to the staging area:
+```bash
+  git add random_diff.py
+```
+  and check again for differences
+```bash
+  git status
+```
+  You added something to the staging area!
+
+  Nothing is definitive yet, you can in principle still apply local modifications to the file and re-add it.
+  
+6. You are now convinced of the changes you made, time to commit them.
+```bash
+  git commit -m "added python script"
+```
+   The commit just created a snapshot of the repository at this point in time. It is important to write down meaningful commit messages, so that other collaborators (and future versions of yourself) can have an idea of what you've done.
+
+7. The commit you made is now available only on your local clone. It's time to push your changes to the remote.
+```bash
+  git push
+```
+
+## Exercise 3. Working in parallel. Issues, Branches, Pull Requests
