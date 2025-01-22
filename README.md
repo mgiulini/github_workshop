@@ -44,24 +44,22 @@ It's now time that everyone of you has a copy of the online repository on your l
 
 Now that we have a shared repository, let's add something to it.
 
-[Here]() you will find a very simple python script that generates three random numbers, sorts them, and calculates the average difference between them.
+[Here](example/order_models.py) you will find a very simple python script that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
 
 The following instructions should be only executed by one group member. The others can have a look.
 
-1. Download the script and move it to the repository directory.
+1. Download the script and the data files, and move them to the repository directory.
 2. From the terminal, navigate to the repository directory.
 3. Try the script to see it it works properly on your computer.
 ```bash
-python random_diff.py
+python order_models.py
 ```
 
 4. Once you're sure the script works, check for the changes within the repository
 ```bash
   git status
 ```
-  You should see something similar to this:
-
-  This command will tell you the current state of the working directory.
+  This command will tell you the current state of the working directory. You should see something similar to this [! image](figures/status.png)
 
 5. add the script to the staging area:
 ```bash
