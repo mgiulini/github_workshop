@@ -44,40 +44,42 @@ It's now time that everyone of you has a copy of the online repository on your l
 
 Now that we have a shared repository, let's add something to it.
 
-[Here]() you will find a very simple python script that generates three random numbers, sorts them, and calculates the average difference between them.
+[Here](example/order_models.py) you will find a very simple python script that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
 
 The following instructions should be only executed by one group member. The others can have a look.
 
-1. Download the script and move it to the repository directory.
+1. Download the script and the data files, and move them to the repository directory.
 2. From the terminal, navigate to the repository directory.
 3. Try the script to see it it works properly on your computer.
 ```bash
-python random_diff.py
+python order_models.py
 ```
 
 4. Once you're sure the script works, check for the changes within the repository
 ```bash
   git status
 ```
-  You should see something similar to this:
-
-  This command will tell you the current state of the working directory.
+  This command will tell you the current state of the working directory. You should see something similar to this ![image](figures/status.png)
 
 5. add the script to the staging area:
 ```bash
   git add random_diff.py
+```
+..and don't forget the data!
+```bash
+  git add capri_ss.csv
 ```
   and check again for differences
 ```bash
   git status
 ```
   You added something to the staging area!
-
+![image](figures/staged.png)
   Nothing is definitive yet, you can in principle still apply local modifications to the file and re-add it.
   
 6. You are now convinced of the changes you made, time to commit them.
 ```bash
-  git commit -m "added python script"
+  git commit -m "added python script and data"
 ```
    The commit just created a snapshot of the repository at this point in time. It is important to write down meaningful commit messages, so that other collaborators (and future versions of yourself) can have an idea of what you've done.
 
@@ -86,4 +88,19 @@ python random_diff.py
   git push
 ```
 
+The other group members can now update their own clones with the new content available on the remote
+```bash
+  git pull
+```
+
 ## Exercise 3. Working in parallel. Issues, Branches, Pull Requests
+
+You or one of your colleagues decide that the project needs some changes. In our research context, let's assume that this means refining and improving our approach according to the following features.
+
+1. Our new score should contain the 'bsa' (buried surface area) value, that should be weighted with a weight equal to 0.01 in our score;
+2. unfortunately one model (**model_108**) has to be discarded, together with all the associated data (row), as we discovered that it was obtained with a wrong procedure;
+3. our repository should contain a short piece of documentation to explain our approach to the problem.
+
+
+
+
