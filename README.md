@@ -101,6 +101,46 @@ You or one of your colleagues decide that the project needs some changes. In our
 2. unfortunately one model (**model_108**) has to be discarded, together with all the associated data (row), as we discovered that it was obtained with a wrong procedure;
 3. our repository should contain a short piece of documentation to explain our approach to the problem.
 
+#### Divide the tasks between the members of the group
+
+### Issues
+Every group member should create an issue about the desired feature
+- go to the main page of the repository and click on *Issues*
+- select *New issue*
+- write a title and a description that briefly summarises the desired change
+- Click on *Assign to yourself*, on the right side of the page: this means that you're responsible for this modification to the project. Knowing this, other collaborators will not work on the same feature at the same time.
+- [Optional]: you can give a label to the issue by selecting one of the existing labels (on the right side of the page), or creating a new one
+
+![image](figures/label.png)
+
+### Branching
+
+It is now time to do the actual work!
+
+Here you are developing a new feature, so you don't want your work to interfere with the main (production) branch and to become part of the project without being carefully checked. These are the reasons why we will here use the powerful concept of branches 
+
+- using the terminal, navigate to your local clone of the repo
+- first, make sure you have the most updated version of the project
+```bash
+  git pull
+```
+- let's create a new branch related to the feature. As an example, let's consider we're dealing with the documentation:
+```bash
+  git checkout -b create_docs
+```
+  This is a shortcut for the more complete
+```bash
+  git branch create_docs
+  git checkout create_docs
+```
+
+- time to work now! Implement your feature as well as you can. Add and commit your changes whenever you think you reached an important point of the implementation. **Do not push the code yet**
+- Everything is fine? Time to push the feature to the remote server.
+```bash
+  git push -u origin create_docs
+```
+Why not the standard git push here? The remote server does not know anything about the create_docs branch yet. With this command we specify that a branch create_docs should be created on the remote server, and that this should be connected to the create_docs branch available locally. Every future git pull/git push command on the local branch will fetch/deliver content to the linked remote branch.
+
 
 
 
