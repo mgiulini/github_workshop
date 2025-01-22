@@ -59,23 +59,27 @@ python order_models.py
 ```bash
   git status
 ```
-  This command will tell you the current state of the working directory. You should see something similar to this [! image](figures/status.png)
+  This command will tell you the current state of the working directory. You should see something similar to this ![image](figures/status.png)
 
 5. add the script to the staging area:
 ```bash
   git add random_diff.py
+```
+..and don't forget the data!
+```bash
+  git add capri_ss.csv
 ```
   and check again for differences
 ```bash
   git status
 ```
   You added something to the staging area!
-
+![image](figures/staged.png)
   Nothing is definitive yet, you can in principle still apply local modifications to the file and re-add it.
   
 6. You are now convinced of the changes you made, time to commit them.
 ```bash
-  git commit -m "added python script"
+  git commit -m "added python script and data"
 ```
    The commit just created a snapshot of the repository at this point in time. It is important to write down meaningful commit messages, so that other collaborators (and future versions of yourself) can have an idea of what you've done.
 
@@ -84,4 +88,19 @@ python order_models.py
   git push
 ```
 
+The other group members can now update their own clones with the new content available on the remote
+```bash
+  git pull
+```
+
 ## Exercise 3. Working in parallel. Issues, Branches, Pull Requests
+
+You or one of your colleagues decide that the project needs some changes. In our research context, let's assume that this means refining and improving our approach according to the following features.
+
+1. Our new score should contain the 'bsa' (buried surface area) value, that should be weighted with a weight equal to 0.01 in our score;
+2. unfortunately one model (**model_108**) has to be discarded, together with all the associated data (row), as we discovered that it was obtained with a wrong procedure;
+3. our repository should contain a short piece of documentation to explain our approach to the problem.
+
+
+
+
