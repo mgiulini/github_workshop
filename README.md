@@ -141,6 +141,24 @@ Here you are developing a new feature, so you don't want your work to interfere 
 ```
 Why not the standard git push here? The remote server does not know anything about the create_docs branch yet. With this command we specify that a branch create_docs should be created on the remote server, and that this should be connected to the create_docs branch available locally. Every future git pull/git push command on the local branch will fetch/deliver content to the linked remote branch.
 
+### Pull Requests and code review
 
+The feature is now available on the remote server. It is time to merge it with the main branch. This is done through a Pull Request (PR).
 
+- go to the main page of the repository
 
+You should already see a message like this:
+![image](figures/pull_request.png)
+
+You can open the Pull Request by clicking on the *Compare & pull request* button. Add a title and a description to the PR, and click on *Create pull request*.
+
+**Alternatively**:
+- click on *Pull Requests*
+- click on *New pull request*
+- select the branch you want to merge into the main branch
+
+The PR is now open. The other group members can now review the code, ask for changes, and approve the PR. Once the PR is approved, the branch can be **merged** into the main branch.
+
+Within the PR page, you can see the changes made in the code, and you can comment on them.
+
+You can ask for a review by clicking on the *Reviewers* button on the right side of the page. Your collaborators should receive an e-mail with the request.
