@@ -52,7 +52,7 @@ Now your repository should have been created. In this situation the repository i
 
 The other group members should have received an e-mail with the details about the shared repository.
 
-It's now time that everyone of you has a copy of the online repository on your laptop.
+It's now time for all of you to have a copy of the online repository on your laptop.
 
 - open the terminal on your laptop
 - search the directory where you want to have your clone of the project (Desktop is also fine)
