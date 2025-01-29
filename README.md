@@ -1,5 +1,32 @@
 # github_workshop
 
+## Exercise 0. Setting up personal access tokens
+
+When using Github on the command line, it is necessary to authenticate yourself. This is done by providing your personal access token instead of the password. This is a more secure way to authenticate yourself than a password.
+
+To create a personal access token:
+- go to your github account
+- click on your profile picture on the top-right corner
+- select *Settings*
+- click on *Developer settings*
+- click on *Personal access tokens*
+- click on *Generate new token*
+- give a name to the token, and select the scopes you want to grant to the token. For the purpose of this workshop, you can select all the scopes.
+- click on *Generate token*
+- copy the token and save it in a safe place. You will not be able to see it again.
+
+For more information on personal access tokens, check [this link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
+
+To use the token please check [this link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#using-a-personal-access-token-on-the-command-line). Basically, every time you want to clone/push/pull a repository, you will be asked for your credentials. Instead of providing your password, you will provide the token.
+
+```bash
+https://github.com/USERNAME/REPO.git
+Username: YOUR-USERNAME
+Password: YOUR-PERSONAL-ACCESS-TOKEN
+```
+
+To get rid of this annoying step, you can cache your credentials, as explained [here](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git).
+
 ## Exercise 1. Creating repositories, managing collaborators, and cloning
 
 ### Creating a repository
