@@ -71,9 +71,10 @@ It's now time for all of you to have a copy of the online repository on your lap
 
 Now that we have a shared repository, let's add something to it.
 
-In the `example` directory of this repository you will find a [very simple python script](example/order_models.py) that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
+In the `example` directory of this repository you will find a [very simple python script](example/order_models.py) (`order_models.py`) that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
 
 ![image](figures/2zex_high.png)
+**Figure**: a good model (orange) of a complex would resemble as much as possible the experimental structure (here in blue). `order_models.py` tries to find the best way to rank different models.
 
 The following instructions should be only executed by one group member. The others can have a look.
 
@@ -84,11 +85,36 @@ The following instructions should be only executed by one group member. The othe
 python order_models.py
 ```
 
+You should see this output:
+```bash
+Model rank 1: model_36, score = -0.97
+Model rank 2: model_28, score = -0.78
+Model rank 3: model_35, score = -0.78
+Model rank 4: model_26, score = -0.73
+Model rank 5: model_25, score = -0.70
+Model rank 6: model_47, score = -0.70
+Model rank 7: model_108, score = -0.70
+Model rank 8: model_29, score = -0.57
+Model rank 9: model_37, score = -0.53
+Model rank 10: model_34, score = -0.47
+Model rank 11: model_31, score = -0.42
+Model rank 12: model_169, score = -0.33
+Model rank 13: model_64, score = -0.11
+Model rank 14: model_91, score = -0.08
+Model rank 15: model_88, score = 0.02
+Model rank 16: model_86, score = 0.33
+Model rank 17: model_61, score = 2.71
+Model rank 18: model_118, score = 5.57
+Model rank 19: model_210, score = 13.07
+```
+
 4. Once you're sure the script works, check for the changes within the repository
 ```bash
   git status
 ```
-  This command will tell you the current state of the working directory. You should see something similar to this ![image](figures/status.png)
+  This command will tell you the current state of the working directory. You should observe something similar to this:
+  
+  ![image](figures/status.png)
 
 5. add the script to the staging area:
 ```bash
@@ -103,7 +129,9 @@ python order_models.py
   git status
 ```
   You added something to the staging area!
+  
 ![image](figures/staged.png)
+
   Nothing is definitive yet, you can in principle still apply local modifications to the file and re-add it.
   
 6. You are now convinced of the changes you made, time to commit them.
@@ -164,8 +192,6 @@ Here you are developing a new feature, so you don't want your work to interfere 
 ```
 
 - time to work now! Implement your feature as well as you can. Add and commit your changes whenever you think you reached an important point of the implementation. **Do not push the code yet**
-
-![image](figures/work.png)
 
 - Is everything fine? Time to push the feature to the remote server.
 ```bash
