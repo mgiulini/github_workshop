@@ -2,7 +2,7 @@
 
 ## Exercise 0. Setting up personal access tokens
 
-When using Github on the command line, it is necessary to authenticate yourself. This is done by providing your personal access token instead of the password. This is a more secure way to authenticate yourself than a password.
+When using Github on the command line (as we will do throughout the tutorial), it is necessary to authenticate yourself. This is done by providing your personal access token instead of the password. This is a more secure way to authenticate yourself.
 
 To create a personal access token:
 - go to your github account
@@ -17,7 +17,7 @@ To create a personal access token:
 
 For more information on personal access tokens, check [this link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic).
 
-To use the token please check [this link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#using-a-personal-access-token-on-the-command-line). Basically, every time you want to clone/push/pull a repository, you will be asked for your credentials. Instead of providing your password, you will provide the token.
+To use the token please check [how to use the token on the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#using-a-personal-access-token-on-the-command-line). Basically, every time you want to clone/push/pull a repository, you will be asked for your credentials. Instead of providing your password, you will provide the token.
 
 ```bash
 https://github.com/USERNAME/REPO.git
@@ -25,7 +25,7 @@ Username: YOUR-USERNAME
 Password: YOUR-PERSONAL-ACCESS-TOKEN
 ```
 
-To get rid of this annoying step, you can cache your credentials, as explained [here](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git).
+To get rid of this annoying step, you can cache your credentials, as explained [in this example](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git).
 
 ## Exercise 1. Creating repositories, managing collaborators, and cloning
 
@@ -45,7 +45,7 @@ One group member has to create a repository in their own github account
 Now your repository should have been created. In this situation the repository is public, and therefore visible to everyone, but the person who created it is the only allowed contributor. Let's see how we can easily add contributors:
 - go to the main page of the repository
 - click on *Settings->Collaborators*
-- click on the Add people button
+- click on the `Add people` button
 - you can now use the other members' github usernames to grant them full access to the repository.
 
 ### Cloning
@@ -54,11 +54,11 @@ The other group members should have received an e-mail with the details about th
 
 It's now time for all of you to have a copy of the online repository on your laptop.
 
-- open the terminal on your laptop
+- open the `terminal` on your laptop
 - search the directory where you want to have your clone of the project (Desktop is also fine)
 - Back to the browser: go to the main page of the repository
 - click on the green **Code** button on the top-right side
-- copy the link available under the HTTPS menu
+- copy the link available under the `HTTPS` menu
 
 - Back to the terminal, write down the following command:
   ```bash
@@ -71,7 +71,9 @@ It's now time for all of you to have a copy of the online repository on your lap
 
 Now that we have a shared repository, let's add something to it.
 
-[Here](example/order_models.py) you will find a very simple python script that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
+In the `example` directory of this repository you will find a [very simple python script](example/order_models.py) that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
+
+![image](figures/2zex_high.png)
 
 The following instructions should be only executed by one group member. The others can have a look.
 
@@ -124,18 +126,18 @@ The other group members can now update their own clones with the new content ava
 
 You or one of your colleagues decide that the project needs some changes. In our research context, let's assume that this means refining and improving our approach according to the following features.
 
-1. Our new score should contain the 'bsa' (buried surface area) value, that should be weighted with a weight equal to 0.01 in our score;
-2. unfortunately one model (**model_108**) has to be discarded, together with all the associated data (row), as we discovered that it was obtained with a wrong procedure;
+1. Our new score should contain the `bsa` (buried surface area) value, that should be weighted with a weight equal to `0.01` in our score;
+2. unfortunately one model (`model_108`) has to be discarded, together with all the associated data (row), as we discovered that it was obtained with a wrong procedure;
 3. our repository should contain a short piece of documentation to explain our approach to the problem.
 
 #### Divide the tasks between the members of the group
 
 ### Issues
 Every group member should create an issue about the desired feature
-- go to the main page of the repository and click on *Issues*
-- select *New issue*
+- go to the main page of the repository and click on `Issues`
+- select `New issue`
 - write a title and a description that briefly summarises the desired change
-- Click on *Assign to yourself*, on the right side of the page: this means that you're responsible for this modification to the project. Knowing this, other collaborators will not work on the same feature at the same time.
+- Click on `Assign to yourself`, on the right side of the page: this means that you're responsible for this modification to the project. Knowing this, other collaborators will not work on the same feature at the same time.
 - [Optional]: you can give a label to the issue by selecting one of the existing labels (on the right side of the page), or creating a new one
 
 ![image](figures/label.png)
@@ -187,12 +189,12 @@ You should already see a message like this:
 You can open the Pull Request by clicking on the *Compare & pull request* button. Add a title and a description to the PR, and click on *Create pull request*.
 
 **Alternatively**:
-- click on *Pull Requests*
-- click on *New pull request*
+- click on `Pull Requests`
+- click on `New pull request`
 - select the branch you want to merge into the main branch
 
 The PR is now open. The other group members can now review the code, ask for changes, and approve the PR. Once the PR is approved, the branch can be **merged** into the main branch.
 
 Within the PR page, you can see the changes made in the code via the *Files changed* tab. You can also browse the several commits that were made in the branch.
 
-You can ask for a review by clicking on the *Reviewers* button on the right side of the page. Your collaborators should receive an e-mail with the request.
+You can ask for a review by clicking on the `Reviewers` button on the right side of the page. Your collaborators should receive an e-mail with the request.
