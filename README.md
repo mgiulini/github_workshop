@@ -5,7 +5,7 @@
 ### Creating a repository
 One group member has to create a repository in their own github account
 
-- Go to [github.com/YOUR_USERNAME]
+- Go to **github.com/YOUR_USERNAME**
 - select *Repositories*
 - click *New* and choose a name for your repository (e.g. "github-tutorial", "my-first-github"). Avoid spaces in repository names
 - leave the repository as public
@@ -38,7 +38,7 @@ It's now time that everyone of you has a copy of the online repository on your l
   git clone https://github.com/YOUR_USERNAME/...
   ```
 
-  substitute this dummy address with the one you just copied. You will be asked for your credentials: once you provide them, the download will start and you will have a local copy of the repository on your laptop!
+  Substitute this dummy address with the one you just copied. You will be asked for your credentials: once you provide them, the download will start and you will have a local copy of the repository on your laptop!
 
 ## Exercise 2. Add, Commit, Push
 
@@ -63,7 +63,7 @@ python order_models.py
 
 5. add the script to the staging area:
 ```bash
-  git add random_diff.py
+  git add order_models.py
 ```
 ..and don't forget the data!
 ```bash
@@ -135,7 +135,10 @@ Here you are developing a new feature, so you don't want your work to interfere 
 ```
 
 - time to work now! Implement your feature as well as you can. Add and commit your changes whenever you think you reached an important point of the implementation. **Do not push the code yet**
-- Everything is fine? Time to push the feature to the remote server.
+
+![image](figures/work.png)
+
+- Is everything fine? Time to push the feature to the remote server.
 ```bash
   git push -u origin create_docs
 ```
@@ -163,6 +166,6 @@ You can open the Pull Request by clicking on the *Compare & pull request* button
 
 The PR is now open. The other group members can now review the code, ask for changes, and approve the PR. Once the PR is approved, the branch can be **merged** into the main branch.
 
-Within the PR page, you can see the changes made in the code, and you can comment on them.
+Within the PR page, you can see the changes made in the code via the *Files changed* tab. You can also browse the several commits that were made in the branch.
 
 You can ask for a review by clicking on the *Reviewers* button on the right side of the page. Your collaborators should receive an e-mail with the request.
