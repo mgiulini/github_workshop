@@ -1,4 +1,4 @@
-# github_workshop
+# Github workshop, 2/2/2025
 
 ## Exercise 0. Setting up personal access tokens
 
@@ -36,7 +36,7 @@ One group member has to create a repository in their own github account
 - select *Repositories*
 - click *New* and choose a name for your repository (e.g. "github-tutorial", "my-first-github"). Avoid spaces in repository names
 - leave the repository as public
-- tick the Add a README file box: this will authomatically add an empty README file to your new project. 
+- tick the `Add a README file` box: this will authomatically add an empty README file to your new project. 
 
 **Tip**: for projects involving sensible data, it is advised to create a repository in *private* mode. It is anyway always possible to change the visibility of the repository later, for example when you are about to submit a research paper and you want to make the data available.
 
@@ -71,7 +71,7 @@ It's now time for all of you to have a copy of the online repository on your lap
 
 Now that we have a shared repository, let's add something to it.
 
-In the `example` directory of this repository you will find a [very simple python script](example/order_models.py) (`order_models.py`) that reads [some data](example/capri_ss.csv) about possible models of a biomolecular complex, and ranks them according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
+In the `example` directory of this repository you will find a [very simple python script](example/order_models.py) (`order_models.py`) that reads [some data](example/capri_ss.csv) regarding possible models of a biomolecular complex. The script ranks the models according to a scoring function, built by combining three different features of the data. The lower the score, the better the model.
 
 ![image](figures/2zex_high.png)
 **Figure**: a good model (orange) of a complex would resemble as much as possible the experimental structure (here in blue). `order_models.py` tries to find the best way to rank different models.
@@ -197,7 +197,7 @@ Here you are developing a new feature, so you don't want your work to interfere 
 ```bash
   git push -u origin create_docs
 ```
-Why not the standard git push here? The remote server does not know anything about the create_docs branch yet. With this command we specify that a branch create_docs should be created on the remote server, and that this should be connected to the create_docs branch available locally. Every future git pull/git push command on the local branch will fetch/deliver content to the linked remote branch.
+Why not the standard `git push` here? The remote server does not know anything about the `create_docs` branch yet. With this command we specify that a branch `create_docs` must be created on the remote server, and that this should be connected to the `create_docs` branch available locally. Every future `git pull`/`git push` command on the local branch will fetch/deliver content to the linked remote branch.
 
 ![image](figures/push_upstream.png)
 
@@ -205,7 +205,7 @@ Why not the standard git push here? The remote server does not know anything abo
 
 ### Pull Requests and code review
 
-The feature is now available on the remote server. It is time to merge it with the main branch. This is done through a Pull Request (PR).
+The feature is now available on the remote server. It is time to `merge` it with the main branch. This is done through a Pull Request (PR).
 
 - go to the main page of the repository
 
