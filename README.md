@@ -87,25 +87,25 @@ python order_models.py
 
 You should see this output:
 ```bash
-Model rank 1: model_36, score = -0.97
-Model rank 2: model_28, score = -0.78
-Model rank 3: model_35, score = -0.78
-Model rank 4: model_26, score = -0.73
-Model rank 5: model_25, score = -0.70
-Model rank 6: model_47, score = -0.70
-Model rank 7: model_108, score = -0.70
-Model rank 8: model_29, score = -0.57
-Model rank 9: model_37, score = -0.53
-Model rank 10: model_34, score = -0.47
-Model rank 11: model_31, score = -0.42
-Model rank 12: model_169, score = -0.33
-Model rank 13: model_64, score = -0.11
-Model rank 14: model_91, score = -0.08
-Model rank 15: model_88, score = 0.02
-Model rank 16: model_86, score = 0.33
-Model rank 17: model_61, score = 2.71
-Model rank 18: model_118, score = 5.57
-Model rank 19: model_210, score = 13.07
+Model rank 1: model_37, score = -3.67
+Model rank 2: model_36, score = -3.21
+Model rank 3: model_25, score = -2.02
+Model rank 4: model_31, score = -1.82
+Model rank 5: model_29, score = -1.69
+Model rank 6: model_35, score = -1.32
+Model rank 7: model_34, score = -0.71
+Model rank 8: model_26, score = -0.62
+Model rank 9: model_108, score = 0.86
+Model rank 10: model_47, score = 0.88
+Model rank 11: model_28, score = 1.56
+Model rank 12: model_64, score = 2.54
+Model rank 13: model_169, score = 3.23
+Model rank 14: model_88, score = 3.79
+Model rank 15: model_86, score = 4.76
+Model rank 16: model_91, score = 4.93
+Model rank 17: model_61, score = 7.49
+Model rank 18: model_118, score = 13.88
+Model rank 19: model_210, score = 18.49
 ```
 
 4. Once you're sure the script works, check for the changes within the repository
@@ -190,6 +190,17 @@ Here you are developing a new feature, so you don't want your work to interfere 
   git branch create_docs
   git checkout create_docs
 ```
+  PS: although `git checkout` has always been the way to move across branches, the `git switch` command is now available. You can use it as follows:
+```bash
+  git switch -c create_docs
+```
+  where -c stands for "create".
+
+  You can always check the branches available in your local clone and on the remote server with
+```bash
+  git branch -a
+```
+  The branch you're currently working on is marked with an asterisk.
 
 - time to work now! Implement your feature as well as you can. Add and commit your changes whenever you think you reached an important point of the implementation. **Do not push the code yet**
 
@@ -201,7 +212,7 @@ Why not the standard `git push` here? The remote server does not know anything a
 
 ![image](figures/push_upstream.png)
 
-*Notice how* **branch 'pr' set up to track 'origin/pr'>**
+*Notice how* **branch 'pr' set up to track 'origin/pr'**
 
 ### Pull Requests and code review
 
