@@ -220,10 +220,11 @@ The feature is now available on the remote server. It is time to `merge` it with
 
 - go to the main page of the repository
 
-You should already see a message like this:
-![image](figures/pr.png)
+![image](figures/compare_and_pr.png)
 
 You can open the Pull Request by clicking on the *Compare & pull request* button. Add a title and a description to the PR, and click on *Create pull request*.
+
+![image](figures/pr.png)
 
 **Alternatively**:
 - click on `Pull Requests`
