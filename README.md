@@ -1,4 +1,4 @@
-# Github workshop, 2/2/2025
+# Github workshop
 
 ## Exercise 0. Setting up personal access tokens
 
